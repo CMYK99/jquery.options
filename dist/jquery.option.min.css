@@ -11,28 +11,42 @@
     border:1px solid #ddd;
     box-shadow:0 0 10px -4px #000;
 }
-.options-box:before{
-    content:'';
+.options-box .box-point{
     z-index:0;
-    box-shadow:0 0 10px -4px #000;
-    background:#fff;
-    top:0; left:50%;
     position:absolute;
-    border-radius:2px;
-    border:1px solid #ddd;
     width:10px; height:10px;
-    -webkit-transform:rotate(45deg) translate(-50%, 0);
-            transform:rotate(45deg) translate(-50%, 0);
 }
-.options-box.left:before{
-    top:0; left:auto; right:0;
-    -webkit-transform:rotate(45deg) translate(60%, 0);
-            transform:rotate(45deg) translate(60%, 0);
+.options-box .box-point:before{
+    content:'';
+    display:block;
+    background:#fff;
+    border-radius:2px;
+    box-sizing:border-box;
+    border:1px solid #ddd;
+    width:inherit; height:inherit;
+    box-shadow:0 0 10px -4px #000;
+    -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
 }
-.options-box.right:before{
-    top:10px; left:0;
-    -webkit-transform:rotate(45deg) translate(-60%, 0);
-            transform:rotate(45deg) translate(-60%, 0);
+.options-box.bottom .box-point{
+    top:0; left:50%;
+    -webkit-transform:translate(-50%, -50%);
+            transform:translate(-50%, -50%);
+}
+.options-box.top .box-point{
+    bottom:0; left:50%;
+    -webkit-transform:translate(-50%, 50%);
+            transform:translate(-50%, 50%);
+}
+.options-box.left .box-point{
+    right:0; top:8px;
+    -webkit-transform:translate(50%, 0);
+            transform:translate(50%, 0);
+}
+.options-box.right .box-point{
+    left:0; top:8px;
+    -webkit-transform:translate(-50%, 0);
+            transform:translate(-50%, 0);
 }
 .options-box .lists{
     position:relative;
