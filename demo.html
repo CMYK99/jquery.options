@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8;">
+    <link href="./dist/jquery.option.css" rel="stylesheet" />
+    <title>Option</title>
+    <style>
+        *{margin:0; padding:0;}
+        ul,ol,dl{list-style: none}
+    </style>
+</head>
+<body>
+<div style="text-align: center">
+    <button class="option"></button>
+    <button class="option"></button>
+</div>
+<div style="margin-top:50px; text-align: center">
+    <button class="option"></button>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<script src="./dist/jquery.option.js"></script>
+<script>
+    $('.option').H5Option({
+        vals:[{
+            name:'请选择',
+            value:null,
+        },{
+            name:'选项1',
+            value:'opt'
+        },{
+            name:'更多',
+            vals:[{
+                name:'更多1',
+                value:'1-1'
+            },{
+                name:'更多2',
+                value:'1-2'
+            },{
+                name:'更多3',
+                value:'1-3'
+            },]
+        }],
+    }).change(function(){
+        console.log($(this).data());
+    })
+</script>
+</body>
+</html>

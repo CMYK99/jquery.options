@@ -7,7 +7,7 @@
 .options-box{
     z-index:99999;
     position:fixed;
-    border-radius:3px;
+    border-radius:2px;
     border:1px solid #ddd;
     box-shadow:0 0 10px -4px #000;
 }
@@ -49,16 +49,21 @@
             transform:translate(-50%, 0);
 }
 .options-box .lists{
+    border-radius:2px;
     position:relative;
     background:#fff;
+    overflow:hidden;
     z-index:1;
 }
 .options-box .lists .option{
+    color:#666;
     font-size:14px;
     padding:3px 18px;
     text-align:center;
     position:relative;
+    line-height:1.6em;
     border-bottom:1px solid #ddd;
+    font-family:'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .options-box .lists .option.has-vals:after{
     content: '';
