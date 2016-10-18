@@ -6,9 +6,7 @@
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
-console.log(11)
 !function(){
-    console.log(11)
     "use strict"
     function ParseVals(dom, vals){
         var link = {};
